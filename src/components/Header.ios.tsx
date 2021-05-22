@@ -1,31 +1,33 @@
-import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import React from "react";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import colors from "../constants/colors";
+import fonts from "../constants/fonts";
 
 export function Header() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>to.</Text>
-        <Text style={[styles.headerText, { fontFamily: 'Poppins-SemiBold' }]}>do</Text>
+        <Text style={[styles.headerText, { fontFamily: fonts.bold }]}>do</Text>
       </View>
     </SafeAreaView>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#273FAD',
+    backgroundColor: colors.blue,
   },
   header: {
     paddingBottom: 44,
-    backgroundColor: '#273FAD',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row'
+    backgroundColor: colors.blue,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
   },
   headerText: {
     fontSize: 24,
-    color: '#FFF',
-    fontFamily: 'Poppins-Regular',
-  }
+    color: colors.white,
+    fontFamily: fonts.regular,
+  },
 });

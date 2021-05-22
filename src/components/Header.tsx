@@ -1,27 +1,29 @@
-import React from 'react';
-import { View, Text, StatusBar, StyleSheet } from 'react-native';
+import React from "react";
+import { StatusBar, StyleSheet, Text, View } from "react-native";
+import colors from "../constants/colors";
+import fonts from "../constants/fonts";
 
 export function Header() {
   return (
     <View style={styles.header}>
       <Text style={styles.headerText}>to.</Text>
-      <Text style={[styles.headerText, { fontFamily: 'Poppins-SemiBold' }]}>do</Text>
+      <Text style={[styles.headerText, { fontFamily: fonts.bold }]}>do</Text>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   header: {
     paddingTop: StatusBar.currentHeight,
     paddingBottom: 44,
-    backgroundColor: '#273FAD',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row'
+    backgroundColor: colors.blue,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
   },
   headerText: {
     fontSize: 24,
-    color: '#FFF',
-    fontFamily: 'Poppins-Regular',
-  }
+    color: colors.white,
+    fontFamily: fonts.regular,
+  },
 });
